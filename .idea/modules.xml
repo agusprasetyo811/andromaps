@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/andromaps.iml" filepath="$PROJECT_DIR$/andromaps.iml" />
+      <module fileurl="file:///mnt/sda7/JOBS/OMAPSLAB/OMAPS-MOBILE/ANDROOMAPS/ANDROMAPS/ANDROMAPS.iml" filepath="/mnt/sda7/JOBS/OMAPSLAB/OMAPS-MOBILE/ANDROOMAPS/ANDROMAPS/ANDROMAPS.iml" />
+      <module fileurl="file:///mnt/sda7/JOBS/OMAPSLAB/OMAPS-MOBILE/ANDROOMAPS/ANDROOMAPS.iml" filepath="/mnt/sda7/JOBS/OMAPSLAB/OMAPS-MOBILE/ANDROOMAPS/ANDROOMAPS.iml" />
     </modules>
   </component>
 </project>

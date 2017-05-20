@@ -5,6 +5,12 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="/mnt/sda7/JOBS/OMAPSLAB/OMAPS-MOBILE/ANDROOMAPS" />
+            <option value="/mnt/sda7/JOBS/OMAPSLAB/OMAPS-MOBILE/ANDROOMAPS/ANDROMAPS" />
+          </set>
+        </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
