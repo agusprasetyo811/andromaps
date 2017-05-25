@@ -49,6 +49,18 @@ public class ActivityHelper {
     }
 
     /**
+     * To Activity Callback without listener
+     *
+     * @param a
+     * @param key
+     * @param activity
+     */
+    public void toActivityCallback(Activity a, int key, Class<?> activity) {
+        Intent i = new Intent(a, activity);
+        a.startActivityForResult(i, key);
+    }
+
+    /**
      * ToForceActivity
      * @param a
      * @param activity
