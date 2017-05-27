@@ -1,11 +1,17 @@
 package com.omapslab.andromaps.helpers;
 
 import android.app.Activity;
+import android.content.Context;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.GridView;
 import android.widget.ListAdapter;
+import android.widget.TextView;
+
+import com.omapslab.andromaps.util.URLImageParser;
 
 /**
  * View Helpers
@@ -14,6 +20,11 @@ import android.widget.ListAdapter;
  * -------------------------------------------------------------
  */
 public class ViewHelper {
+
+    private Context c;
+    public ViewHelper(Context c) {
+        this.c = c;
+    }
 
     /**
      * @param gridView
@@ -63,6 +74,17 @@ public class ViewHelper {
     public void showKeyboard(Activity a) {
         InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0);
+    }
+
+    /**
+     *
+     * @param htmlTextView
+     * @param htmlData
+     */
+    public void setHtmlTextView(TextView htmlTextView, String htmlData) {
+        URLImageParser p = new URLImageParser(htmlTextView, c);
+        Spanned htmlSpan = Html.fromHtml(htmlData, p, null);
+        htmlTextView.setText(htmlSpan);
     }
 
 }

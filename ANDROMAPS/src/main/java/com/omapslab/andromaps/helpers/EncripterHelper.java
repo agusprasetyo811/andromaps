@@ -19,7 +19,7 @@ public class EncripterHelper {
      * @return
      */
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    public static String base64encode(String text) {
+    public String base64encode(String text) {
         byte[] data = text.getBytes(StandardCharsets.UTF_8);
         return Base64.encodeToString(data, Base64.DEFAULT);
     }
@@ -31,7 +31,7 @@ public class EncripterHelper {
      * @return
      */
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    public static String base64decode(String base64) {
+    public String base64decode(String base64) {
         byte[] data = Base64.decode(base64, Base64.DEFAULT);
         return new String(data, StandardCharsets.UTF_8);
     }
@@ -42,7 +42,7 @@ public class EncripterHelper {
      * @param md5
      * @return
      */
-    public static String MD5(String md5) {
+    public String MD5(String md5) {
         try {
             java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
             byte[] array = md.digest(md5.getBytes());

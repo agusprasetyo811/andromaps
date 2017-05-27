@@ -6,12 +6,14 @@ import android.util.Base64;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.omapslab.andromaps.baseapi.datamanager.TokenManager;
 import com.omapslab.andromaps.baseapi.model.AccessToken;
 import com.omapslab.andromaps.baseapi.model.AuthModel;
 import com.omapslab.andromaps.contants.APPS_CORE;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Authenticator;
 import okhttp3.Interceptor;
@@ -43,6 +45,53 @@ public class RestClient {
     private Retrofit retrofit;
     private Context c;
     private TokenManager tokenManager;
+
+
+    /**
+     * @param baseUrl
+     */
+    public RestClient(String baseUrl) {
+
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.readTimeout(60, TimeUnit.SECONDS);
+        httpClient.connectTimeout(60, TimeUnit.SECONDS);
+        httpClient.addInterceptor(logging);
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .client(httpClient.build())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
+
+    public RestClient(String baseUrl, String auth) {
+
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.readTimeout(60, TimeUnit.SECONDS);
+        httpClient.connectTimeout(60, TimeUnit.SECONDS);
+        httpClient.addInterceptor(logging);
+        AuthenticationInterceptor authenticationInterceptor = new AuthenticationInterceptor(auth);
+        httpClient.addInterceptor(authenticationInterceptor);
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .client(httpClient.build())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
 
 
     /**
@@ -213,6 +262,27 @@ public class RestClient {
                 .build().create(apiInterfaceClass);
     }
 
+
+    /**
+     * AuthenticationInterceptor
+     */
+    public class AuthenticationInterceptor implements Interceptor {
+
+        private String authToken;
+
+        public AuthenticationInterceptor(String token) {
+            this.authToken = token;
+        }
+
+        @Override
+        public Response intercept(Chain chain) throws IOException {
+            Request original = chain.request();
+            Request.Builder builder = original.newBuilder()
+                    .header("Authorization", authToken);
+            Request request = builder.build();
+            return chain.proceed(request);
+        }
+    }
 
     /**
      * Creates an implementation of the API defined

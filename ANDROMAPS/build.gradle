@@ -5,6 +5,7 @@ group='com.github.agusprasetyo811'
 
 
 android {
+    useLibrary 'org.apache.http.legacy'
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
 
@@ -36,6 +37,8 @@ dependencies {
     compile 'io.reactivex:rxandroid:0.24.0'
     provided 'org.glassfish:javax.annotation:10.0-b28'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.0'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+
 }
 
 // build a jar with source files
