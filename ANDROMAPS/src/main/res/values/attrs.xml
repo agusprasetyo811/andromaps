@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndroomapsSlider">
+        <attr name="sliderPaddingCorner" format="integer" />
+        <attr name="sliderAutoPlay" format="boolean" />
+        <attr name="sliderInterval" format="integer" />
+        <attr name="sliderDirection" format="integer" />
+    </declare-styleable>
+</resources>
