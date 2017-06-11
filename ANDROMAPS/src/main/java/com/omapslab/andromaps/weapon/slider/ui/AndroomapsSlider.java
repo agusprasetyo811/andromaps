@@ -16,8 +16,8 @@ import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
  * <p>
  * Created by omapslab on 6/10/17.
  * Thank to
- *  - https://github.com/TobiasBuchholz/CircularViewPager
- *  - https://github.com/Trinea/android-auto-scroll-view-pager
+ * - https://github.com/TobiasBuchholz/CircularViewPager
+ * - https://github.com/Trinea/android-auto-scroll-view-pager
  */
 
 public class AndroomapsSlider extends AutoScrollViewPager {
@@ -25,6 +25,8 @@ public class AndroomapsSlider extends AutoScrollViewPager {
     private TypedArray a;
     public static int DIRECTION_LEFT = LEFT;
     public static int DIRECTION_RIGHT = RIGHT;
+    private int interval = 0, direction = 0, paddingCorner = 0;
+    private boolean isAutoPlay = true;
 
     public AndroomapsSlider(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -39,34 +41,55 @@ public class AndroomapsSlider extends AutoScrollViewPager {
         boolean sliderAutoPlay = a.getBoolean(R.styleable.AndroomapsSlider_sliderAutoPlay, true);
         int sliderInterval = a.getInteger(R.styleable.AndroomapsSlider_sliderInterval, DEFAULT_INTERVAL);
         int sliderDirection = a.getInteger(R.styleable.AndroomapsSlider_sliderDirection, DIRECTION_RIGHT);
-        setInterval(sliderInterval);
-        setDirection(sliderDirection);
         if (!sliderAutoPlay) {
             stopAutoScroll();
         } else {
             startAutoScroll();
         }
         addOnPageChangeListener(new AndroomapsSliderHandler(this));
+
+        if (interval != 0) {
+            setInterval(interval);
+        } else {
+            setInterval(sliderInterval);
+        }
+
+        if (direction != 0) {
+            setDirection(interval);
+        } else {
+            setDirection(sliderDirection);
+        }
+
+        if (paddingCorner != 0) {
+            setPadding(paddingCorner, 0, paddingCorner, 0);
+        }
+
+        if (isAutoPlay) {
+            startAutoScroll();
+        } else {
+            stopAutoScroll();
+        }
+
     }
 
     public void setSliderInterval(int interval) {
-        setInterval(interval);
+        this.interval = interval;
     }
 
     public void setSliderDirection(int direction) {
-        setInterval(direction);
+        this.direction = direction;
     }
 
     public void setAutoPlay() {
-        startAutoScroll();
+        this.isAutoPlay = true;
     }
 
     public void stopAutoPlay() {
-        stopAutoScroll();
+        this.isAutoPlay = false;
     }
 
     public void setSliderPaddingCorner(int cornerPadding) {
-        setPadding(cornerPadding, 0, cornerPadding, 0);
+        this.paddingCorner = cornerPadding;
     }
 
 
