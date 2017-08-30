@@ -8,5 +8,5 @@ import android.view.ViewGroup;
 
 public interface AndroomapSliderAdapterListener {
 
-    void onGenerateSlider(ViewGroup rootView, Object sliderSample);
+    void onGenerateSlider(ViewGroup rootView, Object sliderSample, int Position);
 }

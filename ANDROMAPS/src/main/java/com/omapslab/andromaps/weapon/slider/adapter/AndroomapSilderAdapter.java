@@ -24,8 +24,11 @@ public class AndroomapSilderAdapter extends BaseCircularViewPagerAdapter<Object>
         this.sliderAdapterListener = sliderAdapterListener;
     }
 
+
+
     @Override
     protected Fragment getFragmentForItem(Object o) {
-        return AndroomapSliderFragment.init(o, layout, sliderAdapterListener);
+        int position = getItemPosition(o);
+        return AndroomapSliderFragment.init(o, position, layout, sliderAdapterListener);
     }
 }

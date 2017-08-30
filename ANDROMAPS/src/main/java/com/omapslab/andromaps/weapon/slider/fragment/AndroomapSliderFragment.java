@@ -19,10 +19,10 @@ import com.omapslab.andromaps.weapon.slider.listener.AndroomapSliderAdapterListe
 public class AndroomapSliderFragment extends Fragment {
 
     Object o;
-    int layout;
+    int layout, position;
     private AndroomapSliderAdapterListener sliderAdapterListener;
 
-    public static AndroomapSliderFragment init(Object o, int layout, AndroomapSliderAdapterListener sliderAdapterListener) {
+    public static AndroomapSliderFragment init(Object o, int position, int layout, AndroomapSliderAdapterListener sliderAdapterListener) {
         AndroomapSliderFragment fragment;
         fragment = new AndroomapSliderFragment(o, layout, sliderAdapterListener);
         return fragment;
@@ -42,7 +42,7 @@ public class AndroomapSliderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(layout, container, false);
-        sliderAdapterListener.onGenerateSlider(rootView, o);
+        sliderAdapterListener.onGenerateSlider(rootView, o, position);
         return rootView;
     }
 }
