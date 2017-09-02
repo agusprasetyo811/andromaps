@@ -2,6 +2,7 @@ package com.omapslab.andromaps.weapon.slider.ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.v4.view.PagerAdapter;
 import android.util.AttributeSet;
 
 import com.omapslab.andromaps.R;
@@ -27,6 +28,7 @@ public class AndroomapsSlider extends AutoScrollViewPager {
     public static int DIRECTION_RIGHT = RIGHT;
     private int interval = 0, direction = 0, paddingCorner = 0;
     private boolean isAutoPlay = true;
+    private ItemSliderClickListener listener;
 
     public AndroomapsSlider(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -48,6 +50,9 @@ public class AndroomapsSlider extends AutoScrollViewPager {
         }
         addOnPageChangeListener(new AndroomapsSliderHandler(this));
 
+
+
+
         if (interval != 0) {
             setInterval(interval);
         } else {
@@ -68,6 +73,10 @@ public class AndroomapsSlider extends AutoScrollViewPager {
             startAutoScroll();
         } else {
             stopAutoScroll();
+        }
+
+        if (listener != null) {
+            listener.onItemSliderClick(this, getAdapter(), getCurrentItem());
         }
 
     }
@@ -92,5 +101,11 @@ public class AndroomapsSlider extends AutoScrollViewPager {
         this.paddingCorner = cornerPadding;
     }
 
+    public void setOnItemSliderClickListener(ItemSliderClickListener listener) {
+        this.listener = listener;
+    }
 
+    public interface ItemSliderClickListener {
+        void onItemSliderClick(AndroomapsSlider androomapsSlider, PagerAdapter adapter, int currentItem);
+    }
 }
