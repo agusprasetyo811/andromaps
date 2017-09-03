@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v4.view.PagerAdapter;
 import android.util.AttributeSet;
+import android.view.View;
 
 import com.omapslab.andromaps.R;
 import com.omapslab.andromaps.weapon.slider.handler.AndroomapsSliderHandler;
@@ -75,9 +76,14 @@ public class AndroomapsSlider extends AutoScrollViewPager {
             stopAutoScroll();
         }
 
-        if (listener != null) {
-            listener.onItemSliderClick(this, getAdapter(), getCurrentItem());
-        }
+        this.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemSliderClick(AndroomapsSlider.this, getAdapter(), getCurrentItem());
+                }
+            }
+        });
 
     }
 
