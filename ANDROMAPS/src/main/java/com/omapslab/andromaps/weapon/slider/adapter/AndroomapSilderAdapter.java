@@ -27,6 +27,7 @@ public class AndroomapSilderAdapter extends BaseCircularViewPagerAdapter<Object>
 
 
 
+
     @Override
     protected Fragment getFragmentForItem(Object o) {
         int position = getItemPosition(o);
