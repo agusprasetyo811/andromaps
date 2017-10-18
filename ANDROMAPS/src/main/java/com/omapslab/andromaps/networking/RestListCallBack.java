@@ -1,6 +1,5 @@
 package com.omapslab.andromaps.networking;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,9 +8,9 @@ import java.util.List;
  * @By Agus Prasetyo | omapslab (agusprasetyo811@gmail.com)
  *-------------------------------------------------------------
  */
-public interface RestCallBack<T> {
+public interface RestListCallBack<T> {
 
-    void onSuccess(T response);
+    void onSuccess(List<T> response);
 
     void onError(String header, String message);
 }
