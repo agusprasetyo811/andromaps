@@ -2,6 +2,7 @@ package com.omapslab.andromaps.networking;
 
 
 import android.content.Context;
+import android.os.Build;
 import android.util.Base64;
 import android.util.Log;
 
@@ -15,16 +16,24 @@ import com.omapslab.andromaps.contants.APPS_CORE;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.cert.CertificateException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 import okhttp3.Authenticator;
+import okhttp3.ConnectionSpec;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.Route;
+import okhttp3.TlsVersion;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -75,6 +84,33 @@ public class RestClient {
     }
 
 
+    public static OkHttpClient.Builder enableTls12OnPreLollipop(OkHttpClient.Builder client) {
+        if (Build.VERSION.SDK_INT >= 16 && Build.VERSION.SDK_INT < 22) {
+            try {
+                SSLContext sc = SSLContext.getInstance("TLSv1.2");
+                sc.init(null, null, null);
+                client.sslSocketFactory(new Tls12SocketFactory(sc.getSocketFactory()));
+
+                ConnectionSpec cs = new ConnectionSpec.Builder(ConnectionSpec.MODERN_TLS)
+                        .tlsVersions(TlsVersion.TLS_1_2)
+                        .build();
+
+                List<ConnectionSpec> specs = new ArrayList<>();
+                specs.add(cs);
+                specs.add(ConnectionSpec.COMPATIBLE_TLS);
+                specs.add(ConnectionSpec.CLEARTEXT);
+
+                client.connectionSpecs(specs);
+            } catch (Exception exc) {
+                Log.e("OkHttpTLSCompat", "Error while setting TLS 1.2", exc);
+            }
+        }
+
+        return client;
+    }
+
+
+
     /**
      *
      * @param baseUrl
@@ -86,21 +122,13 @@ public class RestClient {
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.followRedirects(true);
+        httpClient.followSslRedirects(true);
+        httpClient.retryOnConnectionFailure(true);
+        httpClient.cache(null);
         httpClient.readTimeout(60, TimeUnit.SECONDS);
         httpClient.connectTimeout(60, TimeUnit.SECONDS);
         httpClient.addInterceptor(logging);
-
-        if (disableSSL) {
-            try {
-                URL url = new URL(baseUrl);
-                SSLSocketFactory NoSSLv3Factory = new NoSSLv3SocketFactory(url);
-                httpClient.sslSocketFactory(NoSSLv3Factory);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -108,10 +136,13 @@ public class RestClient {
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .client(httpClient.build())
+                .client(enableTls12OnPreLollipop(httpClient).build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
+
+
+
 
 
     public RestClient(String baseUrl, String auth) {
