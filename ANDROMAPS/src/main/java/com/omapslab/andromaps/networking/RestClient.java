@@ -75,6 +75,11 @@ public class RestClient {
     }
 
 
+    /**
+     *
+     * @param baseUrl
+     * @param disableSSL
+     */
     public RestClient(String baseUrl, boolean disableSSL) {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
