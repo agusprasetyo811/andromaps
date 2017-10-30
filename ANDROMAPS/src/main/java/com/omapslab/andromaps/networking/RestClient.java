@@ -13,7 +13,11 @@ import com.omapslab.andromaps.baseapi.model.AuthModel;
 import com.omapslab.andromaps.contants.APPS_CORE;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.SSLSocketFactory;
 
 import okhttp3.Authenticator;
 import okhttp3.Interceptor;
@@ -58,6 +62,40 @@ public class RestClient {
         httpClient.readTimeout(60, TimeUnit.SECONDS);
         httpClient.connectTimeout(60, TimeUnit.SECONDS);
         httpClient.addInterceptor(logging);
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .client(httpClient.build())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
+
+    public RestClient(String baseUrl, boolean disableSSL) {
+
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.readTimeout(60, TimeUnit.SECONDS);
+        httpClient.connectTimeout(60, TimeUnit.SECONDS);
+        httpClient.addInterceptor(logging);
+
+        if (disableSSL) {
+            try {
+                URL url = new URL(baseUrl);
+                SSLSocketFactory NoSSLv3Factory = new NoSSLv3SocketFactory(url);
+                httpClient.sslSocketFactory(NoSSLv3Factory);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         Gson gson = new GsonBuilder()
                 .setLenient()
