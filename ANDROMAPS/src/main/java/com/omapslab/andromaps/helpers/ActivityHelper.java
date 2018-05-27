@@ -1,5 +1,6 @@
 package com.omapslab.andromaps.helpers;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.content.IntentCompat;
@@ -76,6 +77,7 @@ public class ActivityHelper {
      * System Exit
      * @param a
      */
+    @SuppressLint("WrongConstant")
     public void systemExit(Activity a) {
         Intent i = new Intent(Intent.ACTION_MAIN);
         i.addCategory(Intent.CATEGORY_HOME);
