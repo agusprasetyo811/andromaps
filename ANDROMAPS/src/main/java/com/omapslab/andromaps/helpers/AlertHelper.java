@@ -181,7 +181,7 @@ public class AlertHelper {
         void onClicked();
     }
 
-    public class DialogProperties {
+    public static class DialogProperties {
         private String btnOK = "OK";
         private String btnPositive = "Yes";
         private String btnNegative = "No";
