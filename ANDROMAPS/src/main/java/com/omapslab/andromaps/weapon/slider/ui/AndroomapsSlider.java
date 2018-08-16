@@ -17,7 +17,7 @@ import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
  * Weapon from Androomaps
  * <p>
  * Created by omapslab on 6/10/17.
- * Thank to
+ * Thanks to
  * - https://github.com/TobiasBuchholz/CircularViewPager
  * - https://github.com/Trinea/android-auto-scroll-view-pager
  */

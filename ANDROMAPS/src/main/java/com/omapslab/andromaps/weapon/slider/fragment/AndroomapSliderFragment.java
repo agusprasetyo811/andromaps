@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.omapslab.andromaps.R;
 import com.omapslab.andromaps.weapon.slider.listener.AndroomapSliderAdapterListener;
 
 
@@ -19,7 +20,7 @@ import com.omapslab.andromaps.weapon.slider.listener.AndroomapSliderAdapterListe
 public class AndroomapSliderFragment extends Fragment {
 
     Object o;
-    int layout, position;
+    int layout = R.layout.blank_slider, position = 0;
     private AndroomapSliderAdapterListener sliderAdapterListener;
 
     public static AndroomapSliderFragment init(Object o, int position, int layout, AndroomapSliderAdapterListener sliderAdapterListener) {
@@ -42,7 +43,9 @@ public class AndroomapSliderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(layout, container, false);
-        sliderAdapterListener.onGenerateSlider(rootView, o, position);
+        if (o != null) {
+            sliderAdapterListener.onGenerateSlider(rootView, o, position);
+        }
         return rootView;
     }
 }
