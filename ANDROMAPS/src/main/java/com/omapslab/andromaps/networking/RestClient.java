@@ -129,8 +129,20 @@ public class RestClient {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
-
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.addInterceptor(new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                Request original = chain.request();
+                Request.Builder requestBuilder = original.newBuilder()
+                        .addHeader("Cache-Control", "no-cache")
+                        .addHeader("Cache-Control", "no-store")
+                        .addHeader("Accept-Encoding", "gzip")
+                        .method(original.method(), original.body());
+                Request request = requestBuilder.build();
+                return chain.proceed(request);
+            }
+        }).addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
         httpClient.followRedirects(true);
         httpClient.followSslRedirects(true);
         httpClient.retryOnConnectionFailure(true);
