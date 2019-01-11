@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ANDROMAPS/ANDROMAPS.iml" filepath="$PROJECT_DIR$/ANDROMAPS/ANDROMAPS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ANDROOMAPS.iml" filepath="$PROJECT_DIR$/ANDROOMAPS.iml" />
+    </modules>
+  </component>
+</project>

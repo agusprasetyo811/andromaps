@@ -80,7 +80,22 @@ public class ViewHelper {
      */
     public void showKeyboard(Activity a) {
         InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+    }
+
+    /**
+     * Is Keyboard shown
+     *
+     * @param a
+     * @return
+     */
+    public boolean isKeyboardVisible(Activity a) {
+        InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        if (imm.isAcceptingText()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -95,6 +110,7 @@ public class ViewHelper {
 
     /**
      * Set fullscreen
+     *
      * @param a
      */
     public void setFullScreen(Activity a) {
