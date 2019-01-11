@@ -74,6 +74,16 @@ public class ViewHelper {
     }
 
     /**
+     * Hide Keyboard From window
+     *
+     * @param a
+     */
+    public void hideKeyboard(Activity a, View v) {
+        final InputMethodManager imm = (InputMethodManager) a.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+    }
+
+    /**
      * Show Keyboard
      *
      * @param a
