@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ANDROMAPS/ANDROMAPS.iml" filepath="$PROJECT_DIR$/ANDROMAPS/ANDROMAPS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ANDROOMAPS.iml" filepath="$PROJECT_DIR$/ANDROOMAPS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andromaps.iml" filepath="$PROJECT_DIR$/andromaps.iml" />
     </modules>
   </component>
 </project>
