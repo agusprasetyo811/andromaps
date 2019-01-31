@@ -86,7 +86,7 @@ public class AndroomapsSlider extends AutoScrollViewPager {
             Log.i("ANDROMAP", "Clicked");
             if(listener != null) {
                 Log.i("ANDROMAP", "Clicked On Listener");
-                listener.onItemSliderClick(AndroomapsSlider.this, getAdapter(), getCurrentItem());
+                listener.onItemSliderClick(AndroomapsSlider.this, getAdapter(), getCurrentItem() - 1);
             }
             return true;
         }
