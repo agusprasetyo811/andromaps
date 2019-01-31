@@ -137,8 +137,8 @@ public class RestClient {
                 Request.Builder requestBuilder = original.newBuilder()
                         .addHeader("Cache-Control", "no-cache")
                         .addHeader("Cache-Control", "no-store")
-                        .addHeader("Accept-Encoding", "gzip")
-                        .addHeader("Content-Encoding", "identity")
+                        /*.addHeader("Accept-Encoding", "gzip")
+                        .addHeader("Content-Encoding", "identity")*/
                         .method(original.method(), original.body());
                 Request request = requestBuilder.build();
                 return chain.proceed(request);
