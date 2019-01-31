@@ -5,6 +5,8 @@ import android.content.res.TypedArray;
 import android.support.v4.view.PagerAdapter;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.omapslab.andromaps.R;
@@ -52,9 +54,6 @@ public class AndroomapsSlider extends AutoScrollViewPager {
         }
         addOnPageChangeListener(new AndroomapsSliderHandler(this));
 
-
-
-
         if (interval != 0) {
             setInterval(interval);
         } else {
@@ -77,18 +76,34 @@ public class AndroomapsSlider extends AutoScrollViewPager {
             stopAutoScroll();
         }
 
-        this.setOnClickListener(new OnClickListener() {
+        setupClickListener();
+    }
+
+    private class TapGestureListener extends GestureDetector.SimpleOnGestureListener {
+
+        @Override
+        public boolean onSingleTapConfirmed(MotionEvent e) {
+            Log.i("ANDROMAP", "Clicked");
+            if(listener != null) {
+                Log.i("ANDROMAP", "Clicked On Listener");
+                listener.onItemSliderClick(AndroomapsSlider.this, getAdapter(), getCurrentItem());
+            }
+            return true;
+        }
+    }
+
+    private void setupClickListener() {
+        final GestureDetector tapGestureDetector = new    GestureDetector(getContext(), new TapGestureListener());
+
+        setOnTouchListener(new OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                Log.i("ANDROMAP", "CLICKED");
-                if (listener != null) {
-                    Log.i("ANDROMAP", "CLICKED ON LISTENER");
-                    listener.onItemSliderClick(AndroomapsSlider.this, getAdapter(), getCurrentItem());
-                }
+            public boolean onTouch(View v, MotionEvent event) {
+                tapGestureDetector.onTouchEvent(event);
+                return false;
             }
         });
-
     }
+
 
     public void setSliderInterval(int interval) {
         this.interval = interval;
