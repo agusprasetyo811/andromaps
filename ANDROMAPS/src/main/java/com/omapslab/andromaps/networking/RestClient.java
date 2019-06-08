@@ -102,7 +102,7 @@ public class RestClient {
 
                         @Override
                         public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                            return null;
+                            return new java.security.cert.X509Certificate[]{};
                         }
                     }
             };
@@ -194,13 +194,14 @@ public class RestClient {
         httpClient.connectTimeout(60, TimeUnit.SECONDS);
         httpClient.addInterceptor(logging);
 
+
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                //.client(enableTls12OnPreLollipop(httpClient).build())
+                .client(enableTls12OnPreLollipop(httpClient).build())
                 .client(setSSLFactoryForClient(httpClient).build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
