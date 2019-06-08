@@ -113,7 +113,6 @@ public class RestClient {
             // Create an ssl socket factory with our all-trusting manager
             final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
 
-
             client.sslSocketFactory(sslSocketFactory);
             client.hostnameVerifier(new HostnameVerifier() {
                 @Override
@@ -202,7 +201,7 @@ public class RestClient {
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .client(enableTls12OnPreLollipop(httpClient).build())
+                //.client(enableTls12OnPreLollipop(httpClient).build())
                 .client(setSSLFactoryForClient(httpClient).build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
