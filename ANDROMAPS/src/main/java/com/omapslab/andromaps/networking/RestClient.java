@@ -120,11 +120,10 @@ public class RestClient {
                     return true;
                 }
             });
-
+            return client;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return client;
     }
 
 
