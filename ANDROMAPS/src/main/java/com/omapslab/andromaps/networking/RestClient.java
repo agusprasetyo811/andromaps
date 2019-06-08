@@ -21,7 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
@@ -82,6 +84,48 @@ public class RestClient {
                 .client(httpClient.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+    }
+
+
+    public static OkHttpClient.Builder setSSLFactoryForClient(OkHttpClient.Builder client) {
+        try {
+            // Create a trust manager that does not validate certificate chains
+            final TrustManager[] trustAllCerts = new TrustManager[]{
+                    new X509TrustManager() {
+                        @Override
+                        public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
+                        }
+
+                        @Override
+                        public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
+                        }
+
+                        @Override
+                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                            return null;
+                        }
+                    }
+            };
+
+            // Install the all-trusting trust manager
+            final SSLContext sslContext = SSLContext.getInstance("SSL");
+            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
+            // Create an ssl socket factory with our all-trusting manager
+            final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
+
+
+            client.sslSocketFactory(sslSocketFactory);
+            client.hostnameVerifier(new HostnameVerifier() {
+                @Override
+                public boolean verify(String hostname, SSLSession session) {
+                    return true;
+                }
+            });
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return client;
     }
 
 
@@ -159,6 +203,7 @@ public class RestClient {
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(enableTls12OnPreLollipop(httpClient).build())
+                .client(setSSLFactoryForClient(httpClient).build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }

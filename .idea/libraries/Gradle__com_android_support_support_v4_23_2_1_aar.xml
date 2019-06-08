@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-v4:23.2.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/fd534e544993e828870fbc86ce7b10eb7bf38960/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/fd534e544993e828870fbc86ce7b10eb7bf38960/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/fd534e544993e828870fbc86ce7b10eb7bf38960/output/jars/libs/internal_impl-23.2.1.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/590140586a2a1b6f2c1fbfb304da0aa9ed9005d8/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/590140586a2a1b6f2c1fbfb304da0aa9ed9005d8/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/590140586a2a1b6f2c1fbfb304da0aa9ed9005d8/output/jars/libs/internal_impl-23.2.1.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://D:/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1-javadoc.jar!/" />
