@@ -113,7 +113,7 @@ public class RestClient {
             // Create an ssl socket factory with our all-trusting manager
             final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
 
-            client.sslSocketFactory(sslSocketFactory);
+            client.sslSocketFactory(sslSocketFactory, (X509TrustManager)trustAllCerts[0]);
             client.hostnameVerifier(new HostnameVerifier() {
                 @Override
                 public boolean verify(String hostname, SSLSession session) {
