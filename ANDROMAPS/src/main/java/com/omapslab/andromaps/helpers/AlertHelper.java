@@ -44,12 +44,11 @@ public class AlertHelper {
 
     /**
      * Dialog with prop
-     *
-     * @param a
+     *  @param a
      * @param p
      */
-    public void dialog(Activity a, DialogProperties p) {
-        AlertDialog.Builder alertDialogBuilder = null;
+    public AlertDialog dialog(Activity a, DialogProperties p) {
+        AlertDialog.Builder alertDialogBuilder;
         if (p.getTheme() == 0) {
             alertDialogBuilder = new AlertDialog.Builder(a);
         } else {
@@ -62,17 +61,17 @@ public class AlertHelper {
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+        return alertDialog;
     }
 
     /**
      * Dialog with prop and listener
-     *
-     * @param a
+     *  @param a
      * @param p
      * @param listener
      */
-    public void dialog(Activity a, DialogProperties p, final dialogNeutralListener listener) {
-        AlertDialog.Builder alertDialogBuilder = null;
+    public AlertDialog dialog(Activity a, DialogProperties p, final dialogNeutralListener listener) {
+        AlertDialog.Builder alertDialogBuilder;
         if (p.getTheme() == 0) {
             alertDialogBuilder = new AlertDialog.Builder(a);
         } else {
@@ -86,17 +85,17 @@ public class AlertHelper {
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+        return alertDialog;
     }
 
     /**
      * DialogNeutralOk Helper
-     *
-     * @param a
+     *  @param a
      * @param t
      * @param m
      * @param listener
      */
-    public void dialogNeutralOK(Activity a, String t, String m, final dialogNeutralListener listener) {
+    public AlertDialog dialogNeutralOK(Activity a, String t, String m, final dialogNeutralListener listener) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
         alertDialogBuilder.setTitle(t);
         alertDialogBuilder.setMessage(m).setCancelable(false).setNeutralButton("OK", new DialogInterface.OnClickListener() {
@@ -106,17 +105,17 @@ public class AlertHelper {
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+        return alertDialog;
     }
 
     /**
      * DialogConfirm Helper
-     *
-     * @param a
+     *  @param a
      * @param t
      * @param m
      * @param listener
      */
-    public void dialogConfirm(Activity a, String t, String m, final dialogConfirmListener listener) {
+    public AlertDialog dialogConfirm(Activity a, String t, String m, final dialogConfirmListener listener) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
         alertDialogBuilder.setTitle(t);
         alertDialogBuilder.setMessage(m).setCancelable(false);
@@ -132,16 +131,16 @@ public class AlertHelper {
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+        return alertDialog;
     }
 
     /**
      * Dialog confirm with prop
-     *
-     * @param a
+     *  @param a
      * @param p
      * @param listener
      */
-    public void dialogConfirm(Activity a, DialogProperties p, final dialogConfirmListener listener) {
+    public AlertDialog dialogConfirm(Activity a, DialogProperties p, final dialogConfirmListener listener) {
         AlertDialog.Builder alertDialogBuilder = null;
         if (p.getTheme() == 0) {
             alertDialogBuilder = new AlertDialog.Builder(a);
@@ -162,6 +161,7 @@ public class AlertHelper {
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+        return alertDialog;
     }
 
 
