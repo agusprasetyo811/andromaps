@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: uk.co.chrisjenx:calligraphy:2.2.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/edbcdd29c38cd9fd0eb9c3dc65e688a80733f650/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/edbcdd29c38cd9fd0eb9c3dc65e688a80733f650/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58dae0c49e05f204d80c8e231e322d80/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58dae0c49e05f204d80c8e231e322d80/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
