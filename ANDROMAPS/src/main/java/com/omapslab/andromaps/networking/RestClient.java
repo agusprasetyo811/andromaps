@@ -14,8 +14,6 @@ import com.omapslab.andromaps.baseapi.model.AuthModel;
 import com.omapslab.andromaps.contants.APPS_CORE;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.security.cert.CertificateException;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +38,7 @@ import okhttp3.TlsVersion;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -114,7 +112,7 @@ public class RestClient {
             // Create an ssl socket factory with our all-trusting manager
             final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
 
-            client.sslSocketFactory(sslSocketFactory, (X509TrustManager)trustAllCerts[0]);
+            client.sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0]);
             client.hostnameVerifier(new HostnameVerifier() {
                 @Override
                 public boolean verify(String hostname, SSLSession session) {
@@ -164,7 +162,6 @@ public class RestClient {
 
 
     /**
-     *
      * @param baseUrl
      * @param disableSSL
      */
@@ -205,12 +202,9 @@ public class RestClient {
                 .client(enableTls12OnPreLollipop(httpClient).build())
                 .client(setSSLFactoryForClient(httpClient).build())
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
-
-
-
 
 
     public RestClient(String baseUrl, String auth) {
