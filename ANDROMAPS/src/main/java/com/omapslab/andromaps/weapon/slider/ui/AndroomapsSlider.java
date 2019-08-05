@@ -52,7 +52,7 @@ public class AndroomapsSlider extends AutoScrollViewPager {
         } else {
             startAutoScroll();
         }
-        addOnPageChangeListener(new AndroomapsSliderHandler(this));
+        setOnPageChangeListener(new AndroomapsSliderHandler(this));
 
         if (interval != 0) {
             setInterval(interval);

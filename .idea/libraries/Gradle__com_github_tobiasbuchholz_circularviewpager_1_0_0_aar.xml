@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.tobiasbuchholz:circularviewpager:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/57abfa27ddbf2ff46e9b2a3798d77fc5990aadb4/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/57abfa27ddbf2ff46e9b2a3798d77fc5990aadb4/output/jars/classes.jar!/" />
+      <root url="file://D:/Android/.android/build-cache/57abfa27ddbf2ff46e9b2a3798d77fc5990aadb4/output/res" />
+      <root url="jar://D:/Android/.android/build-cache/57abfa27ddbf2ff46e9b2a3798d77fc5990aadb4/output/jars/classes.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tobiasbuchholz/circularviewpager/1.0.0/1362c791f2a1eb7c5c1140415f5fd27fb14c198e/circularviewpager-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tobiasbuchholz/circularviewpager/1.0.0/10ea97fcbc57a0b41f20761ee05c6bc9788cd54a/circularviewpager-1.0.0-sources.jar!/" />
     </SOURCES>
