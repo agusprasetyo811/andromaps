@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5166c58e-41bc-49fe-aa9d-3f9e0ac6026b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANDROMAPS/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/ANDROMAPS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/ANDROMAPS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/ANDROMAPS/build/generated/not_namespaced_r_class_sources/" />
     <ignored path="$PROJECT_DIR$/ANDROMAPS/build/generated/source/r/" />
@@ -43,10 +38,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ANDROMAPS/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-95">
+            <state relative-caret-position="784">
               <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
             </state>
           </provider>
@@ -85,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+            <state relative-caret-position="350">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -144,9 +139,9 @@
     <findStrings>
       <find>addOn</find>
       <find>setAda</find>
-      <find>classesJar</find>
       <find>compile</find>
       <find>implementation</find>
+      <find>classesJar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,8 +158,8 @@
         <option value="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/util/GridSpacingItemDecoration.java" />
         <option value="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/ActivityHelper.java" />
         <option value="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/weapon/slider/ui/AndroomapsSlider.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/ANDROMAPS/build.gradle" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -306,9 +301,9 @@
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.95908546" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49970502" weight="0.32972324" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49970502" visible="true" weight="0.32972324" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.500295" side_tool="true" weight="0.32972324" />
-      <window_info anchor="bottom" id="Build" order="6" visible="true" weight="0.32972324" />
+      <window_info anchor="bottom" id="Build" order="6" weight="0.32972324" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Debug" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32972324" />
@@ -511,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/weapon/slider/ui/AndroomapsSlider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -574,8 +562,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ANDROMAPS/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
+        <state relative-caret-position="784">
           <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
