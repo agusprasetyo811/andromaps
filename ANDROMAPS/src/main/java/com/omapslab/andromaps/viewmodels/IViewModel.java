@@ -1,7 +1,8 @@
 package com.omapslab.andromaps.viewmodels;
 
-import android.app.Activity;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * MVP Core
@@ -21,5 +22,5 @@ public interface IViewModel {
 
     void onDestroy();
 
-    void setCurrentActivity(Activity value);
+    void setCurrentActivity(AppCompatActivity value);
 }

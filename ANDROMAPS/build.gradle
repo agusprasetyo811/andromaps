@@ -1,8 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.agusprasetyo811'
+repositories {
+    mavenCentral()
+    google()
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
 
+group='com.github.agusprasetyo811'
 
 android {
     useLibrary 'org.apache.http.legacy'

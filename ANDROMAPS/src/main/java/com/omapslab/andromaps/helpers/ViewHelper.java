@@ -1,6 +1,5 @@
 package com.omapslab.andromaps.helpers;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -14,6 +13,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.GridView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.omapslab.andromaps.util.URLImageParser;
 
@@ -68,8 +69,8 @@ public class ViewHelper {
      *
      * @param a
      */
-    public void hideKeyboard(Activity a) {
-        InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
+    public void hideKeyboard(AppCompatActivity a) {
+        InputMethodManager imm = (InputMethodManager) a.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
     }
 
@@ -78,7 +79,7 @@ public class ViewHelper {
      *
      * @param a
      */
-    public void hideKeyboard(Activity a, View v) {
+    public void hideKeyboard(AppCompatActivity a, View v) {
         final InputMethodManager imm = (InputMethodManager) a.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
@@ -88,8 +89,8 @@ public class ViewHelper {
      *
      * @param a
      */
-    public void showKeyboard(Activity a) {
-        InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
+    public void showKeyboard(AppCompatActivity a) {
+        InputMethodManager imm = (InputMethodManager) a.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
     }
 
@@ -99,8 +100,8 @@ public class ViewHelper {
      * @param a
      * @return
      */
-    public boolean isKeyboardVisible(Activity a) {
-        InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
+    public boolean isKeyboardVisible(AppCompatActivity a) {
+        InputMethodManager imm = (InputMethodManager) a.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE);
         if (imm.isAcceptingText()) {
             return true;
         } else {
@@ -123,7 +124,7 @@ public class ViewHelper {
      *
      * @param a
      */
-    public void setFullScreen(Activity a) {
+    public void setFullScreen(AppCompatActivity a) {
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
 
             setWindowFlag(a, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
@@ -145,7 +146,7 @@ public class ViewHelper {
      * @param bits
      * @param on
      */
-    public static void setWindowFlag(Activity activity, final int bits, boolean on) {
+    public static void setWindowFlag(AppCompatActivity activity, final int bits, boolean on) {
         Window win = activity.getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
         if (on) {

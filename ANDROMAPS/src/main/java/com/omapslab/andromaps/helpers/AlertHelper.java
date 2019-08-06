@@ -1,10 +1,11 @@
 package com.omapslab.andromaps.helpers;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.ContextThemeWrapper;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Alert Helpers
@@ -20,7 +21,7 @@ public class AlertHelper {
      * @param a
      * @param m
      */
-    public void toast(Activity a, String m) {
+    public void toast(AppCompatActivity a, String m) {
         Toast.makeText(a, m, Toast.LENGTH_SHORT).show();
     }
 
@@ -31,7 +32,7 @@ public class AlertHelper {
      * @param t
      * @param m
      */
-    public void dialogNeutralOK(Activity a, String t, String m) {
+    public void dialogNeutralOK(AppCompatActivity a, String t, String m) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
         alertDialogBuilder.setTitle(t);
         alertDialogBuilder.setMessage(m).setCancelable(false).setNeutralButton("OK", new DialogInterface.OnClickListener() {
@@ -47,7 +48,7 @@ public class AlertHelper {
      *  @param a
      * @param p
      */
-    public AlertDialog dialog(Activity a, DialogProperties p) {
+    public AlertDialog dialog(AppCompatActivity a, DialogProperties p) {
         AlertDialog.Builder alertDialogBuilder;
         if (p.getTheme() == 0) {
             alertDialogBuilder = new AlertDialog.Builder(a);
@@ -70,7 +71,7 @@ public class AlertHelper {
      * @param p
      * @param listener
      */
-    public AlertDialog dialog(Activity a, DialogProperties p, final dialogNeutralListener listener) {
+    public AlertDialog dialog(AppCompatActivity a, DialogProperties p, final dialogNeutralListener listener) {
         AlertDialog.Builder alertDialogBuilder;
         if (p.getTheme() == 0) {
             alertDialogBuilder = new AlertDialog.Builder(a);
@@ -95,7 +96,7 @@ public class AlertHelper {
      * @param m
      * @param listener
      */
-    public AlertDialog dialogNeutralOK(Activity a, String t, String m, final dialogNeutralListener listener) {
+    public AlertDialog dialogNeutralOK(AppCompatActivity a, String t, String m, final dialogNeutralListener listener) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
         alertDialogBuilder.setTitle(t);
         alertDialogBuilder.setMessage(m).setCancelable(false).setNeutralButton("OK", new DialogInterface.OnClickListener() {
@@ -115,7 +116,7 @@ public class AlertHelper {
      * @param m
      * @param listener
      */
-    public AlertDialog dialogConfirm(Activity a, String t, String m, final dialogConfirmListener listener) {
+    public AlertDialog dialogConfirm(AppCompatActivity a, String t, String m, final dialogConfirmListener listener) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
         alertDialogBuilder.setTitle(t);
         alertDialogBuilder.setMessage(m).setCancelable(false);
@@ -140,7 +141,7 @@ public class AlertHelper {
      * @param p
      * @param listener
      */
-    public AlertDialog dialogConfirm(Activity a, DialogProperties p, final dialogConfirmListener listener) {
+    public AlertDialog dialogConfirm(AppCompatActivity a, DialogProperties p, final dialogConfirmListener listener) {
         AlertDialog.Builder alertDialogBuilder = null;
         if (p.getTheme() == 0) {
             alertDialogBuilder = new AlertDialog.Builder(a);

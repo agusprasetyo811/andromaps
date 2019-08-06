@@ -1,9 +1,9 @@
 package com.omapslab.andromaps.helpers;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import androidx.core.content.IntentCompat;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Activity Helpers
@@ -18,7 +18,7 @@ public class ActivityHelper {
      * @param a
      * @param activity
      */
-    public void toActivity(Activity a, Class<?> activity) {
+    public void toActivity(AppCompatActivity a, Class<?> activity) {
         Intent i = new Intent(a, activity);
         a.startActivity(i);
     }
@@ -29,7 +29,7 @@ public class ActivityHelper {
      * @param activity
      * @param listener
      */
-    public void toActivity(Activity a, Class<?> activity, ToActivityListener listener) {
+    public void toActivity(AppCompatActivity a, Class<?> activity, ToActivityListener listener) {
         Intent i = new Intent(a, activity);
         listener.setAction(i);
         a.startActivity(i);
@@ -43,7 +43,7 @@ public class ActivityHelper {
      * @param activity
      * @param listener
      */
-    public void toActivityCallback(Activity a, int key, Class<?> activity, ToActivityListener listener) {
+    public void toActivityCallback(AppCompatActivity a, int key, Class<?> activity, ToActivityListener listener) {
         Intent i = new Intent(a, activity);
         listener.setAction(i);
         a.startActivityForResult(i, key);
@@ -56,7 +56,7 @@ public class ActivityHelper {
      * @param key
      * @param activity
      */
-    public void toActivityCallback(Activity a, int key, Class<?> activity) {
+    public void toActivityCallback(AppCompatActivity a, int key, Class<?> activity) {
         Intent i = new Intent(a, activity);
         a.startActivityForResult(i, key);
     }
@@ -66,7 +66,7 @@ public class ActivityHelper {
      * @param a
      * @param activity
      */
-    public void toForceActivity(Activity a, Class<?> activity) {
+    public void toForceActivity(AppCompatActivity a, Class<?> activity) {
         Intent i = new Intent(a, activity);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         a.startActivity(i);
@@ -78,7 +78,7 @@ public class ActivityHelper {
      * @param a
      */
     @SuppressLint("WrongConstant")
-    public void systemExit(Activity a) {
+    public void systemExit(AppCompatActivity a) {
         Intent i = new Intent(Intent.ACTION_MAIN);
         i.addCategory(Intent.CATEGORY_HOME);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS | Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -91,7 +91,7 @@ public class ActivityHelper {
      * @param activity
      * @param listener
      */
-    public void toForceActivity(Activity a, Class<?> activity, ToActivityListener listener) {
+    public void toForceActivity(AppCompatActivity a, Class<?> activity, ToActivityListener listener) {
         Intent i = new Intent(a, activity);
         listener.setAction(i);
         a.startActivity(i);
