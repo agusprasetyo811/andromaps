@@ -1,7 +1,7 @@
 package com.omapslab.andromaps.weapon.slider.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.omapslab.andromaps.weapon.slider.fragment.AndroomapSliderFragment;
 import com.omapslab.andromaps.weapon.slider.listener.AndroomapSliderAdapterListener;

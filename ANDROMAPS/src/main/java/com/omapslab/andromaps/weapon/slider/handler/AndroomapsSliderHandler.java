@@ -1,6 +1,6 @@
 package com.omapslab.andromaps.weapon.slider.handler;
 
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by omapslab on 6/10/17.
