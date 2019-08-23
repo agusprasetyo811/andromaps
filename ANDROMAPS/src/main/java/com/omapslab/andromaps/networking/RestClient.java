@@ -217,8 +217,8 @@ public class RestClient {
 
 
     public static class Config {
-        final HashMap<String, String> customHeader = new HashMap<>();
-        int timeout = 60;
+        private HashMap<String, String> customHeader = new HashMap<>();
+        private int timeout = 60;
         private HttpLoggingInterceptor.Level loggingLevel = HttpLoggingInterceptor.Level.BODY;
 
         public HashMap<String, String> getCustomHeader() {
