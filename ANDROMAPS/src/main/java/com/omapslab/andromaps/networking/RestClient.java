@@ -216,7 +216,7 @@ public class RestClient {
     }
 
 
-    public class Config {
+    public static class Config {
         final HashMap<String, String> customHeader = new HashMap<>();
         int timeout = 60;
         private HttpLoggingInterceptor.Level loggingLevel = HttpLoggingInterceptor.Level.BODY;
