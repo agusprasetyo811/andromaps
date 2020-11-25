@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:interpolator:28.0.0@aar">
     <CLASSES>
-      <root url="jar://D:/Android/.android/build-cache/6318b0b3444208a145915bcdb13f3fc9420aee15/output/jars/classes.jar!/" />
-      <root url="file://D:/Android/.android/build-cache/6318b0b3444208a145915bcdb13f3fc9420aee15/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/6318b0b3444208a145915bcdb13f3fc9420aee15/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/6318b0b3444208a145915bcdb13f3fc9420aee15/output/res" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/9513b430868bb8c2026994f6ca9319a8c56c42a3/output/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/9513b430868bb8c2026994f6ca9319a8c56c42a3/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/9513b430868bb8c2026994f6ca9319a8c56c42a3/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

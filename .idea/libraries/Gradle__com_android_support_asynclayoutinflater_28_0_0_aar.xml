@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:asynclayoutinflater:28.0.0@aar">
     <CLASSES>
-      <root url="jar://D:/Android/.android/build-cache/4b35297e1fe39384a7216727c4771ec691bc42a0/output/jars/classes.jar!/" />
-      <root url="file://D:/Android/.android/build-cache/4b35297e1fe39384a7216727c4771ec691bc42a0/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/4b35297e1fe39384a7216727c4771ec691bc42a0/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/4b35297e1fe39384a7216727c4771ec691bc42a0/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/3bb0d9e9013007aea2ce4c9a2acfab34d9650390/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/3bb0d9e9013007aea2ce4c9a2acfab34d9650390/output/res" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/3bb0d9e9013007aea2ce4c9a2acfab34d9650390/output/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

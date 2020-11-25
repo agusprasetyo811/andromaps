@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:cursoradapter:28.0.0@aar">
     <CLASSES>
-      <root url="jar://D:/Android/.android/build-cache/148048215227af64b89584a1b2286d0950635a93/output/jars/classes.jar!/" />
-      <root url="file://D:/Android/.android/build-cache/148048215227af64b89584a1b2286d0950635a93/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/148048215227af64b89584a1b2286d0950635a93/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/148048215227af64b89584a1b2286d0950635a93/output/res" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/420d7361dc4db741eca2dab01868a150f440955c/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/420d7361dc4db741eca2dab01868a150f440955c/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/420d7361dc4db741eca2dab01868a150f440955c/output/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

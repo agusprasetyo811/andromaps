@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:localbroadcastmanager:28.0.0@aar">
     <CLASSES>
-      <root url="file://D:/Android/.android/build-cache/54d578b855f722c3e77a27f20e93cb3f3ad57a2b/output/res" />
-      <root url="jar://D:/Android/.android/build-cache/54d578b855f722c3e77a27f20e93cb3f3ad57a2b/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/54d578b855f722c3e77a27f20e93cb3f3ad57a2b/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/54d578b855f722c3e77a27f20e93cb3f3ad57a2b/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/8d8f90eac7d3e5d856a70bcda3c964c3ef610e30/output/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/8d8f90eac7d3e5d856a70bcda3c964c3ef610e30/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/8d8f90eac7d3e5d856a70bcda3c964c3ef610e30/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

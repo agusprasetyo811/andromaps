@@ -32,14 +32,18 @@ public class AlertHelper {
      * @param m
      */
     public void dialogNeutralOK(Activity a, String t, String m) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
-        alertDialogBuilder.setTitle(t);
-        alertDialogBuilder.setMessage(m).setCancelable(false).setNeutralButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-            }
-        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+        try {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
+            alertDialogBuilder.setTitle(t);
+            alertDialogBuilder.setMessage(m).setCancelable(false).setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                }
+            });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        } catch (Exception e) {
+
+        }
     }
 
     /**

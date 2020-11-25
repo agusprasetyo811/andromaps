@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: android.arch.lifecycle:livedata-core:1.1.1@aar">
     <CLASSES>
-      <root url="file://D:/Android/.android/build-cache/11eac83d29bd50d0d24acd045480a5984352d18d/output/res" />
-      <root url="jar://D:/Android/.android/build-cache/11eac83d29bd50d0d24acd045480a5984352d18d/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/11eac83d29bd50d0d24acd045480a5984352d18d/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/11eac83d29bd50d0d24acd045480a5984352d18d/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/af006db5982a45025d009b17c695e7a8bc2c04ce/output/res" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/af006db5982a45025d009b17c695e7a8bc2c04ce/output/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/af006db5982a45025d009b17c695e7a8bc2c04ce/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

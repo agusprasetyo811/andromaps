@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:viewpager:28.0.0@aar">
     <CLASSES>
-      <root url="jar://D:/Android/.android/build-cache/56dba73d4e6d793e8d768fd88ce54f5e280755d3/output/jars/classes.jar!/" />
-      <root url="file://D:/Android/.android/build-cache/56dba73d4e6d793e8d768fd88ce54f5e280755d3/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/56dba73d4e6d793e8d768fd88ce54f5e280755d3/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/56dba73d4e6d793e8d768fd88ce54f5e280755d3/output/res" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/fd11278a68344f4d8abaf89ad66f1deaf6fcc726/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/fd11278a68344f4d8abaf89ad66f1deaf6fcc726/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/fd11278a68344f4d8abaf89ad66f1deaf6fcc726/output/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

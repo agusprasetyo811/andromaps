@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:swiperefreshlayout:28.0.0@aar">
     <CLASSES>
-      <root url="jar://D:/Android/.android/build-cache/71e8b3005df1b6ef9d9d0cb385c73f4e8d41da84/output/jars/classes.jar!/" />
-      <root url="file://D:/Android/.android/build-cache/71e8b3005df1b6ef9d9d0cb385c73f4e8d41da84/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/71e8b3005df1b6ef9d9d0cb385c73f4e8d41da84/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/71e8b3005df1b6ef9d9d0cb385c73f4e8d41da84/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/87b1444ea940c41cbc6bf5d13cda824308f10f85/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/87b1444ea940c41cbc6bf5d13cda824308f10f85/output/res" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/87b1444ea940c41cbc6bf5d13cda824308f10f85/output/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.bumptech.glide:okhttp3-integration:4.1.1@aar">
     <CLASSES>
-      <root url="jar://D:/Android/.android/build-cache/7fd78bfc26e878015cd000fc35c77059227c1bae/output/jars/classes.jar!/" />
-      <root url="file://D:/Android/.android/build-cache/7fd78bfc26e878015cd000fc35c77059227c1bae/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/7fd78bfc26e878015cd000fc35c77059227c1bae/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/7fd78bfc26e878015cd000fc35c77059227c1bae/output/res" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/7fd78bfc26e878015cd000fc35c77059227c1bae/output/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/okhttp3-integration/4.1.1/556e8b71ab311d8f847315f7ff61989b0e24e325/okhttp3-integration-4.1.1-javadoc.jar!/" />

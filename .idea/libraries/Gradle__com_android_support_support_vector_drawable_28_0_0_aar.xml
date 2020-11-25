@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-vector-drawable:28.0.0@aar">
     <CLASSES>
-      <root url="file://D:/Android/.android/build-cache/989055ce446090741859ed54ece6f516a8fedf42/output/res" />
-      <root url="jar://D:/Android/.android/build-cache/989055ce446090741859ed54ece6f516a8fedf42/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/989055ce446090741859ed54ece6f516a8fedf42/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/989055ce446090741859ed54ece6f516a8fedf42/output/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/5224af79185a547f840c5c28a754d325c78e26cf/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/5224af79185a547f840c5c28a754d325c78e26cf/output/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/5224af79185a547f840c5c28a754d325c78e26cf/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

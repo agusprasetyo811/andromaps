@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:versionedparcelable:28.0.0@aar">
     <CLASSES>
-      <root url="file://D:/Android/.android/build-cache/1a2b217c42d1984f23a61a6468ef393681338283/output/res" />
-      <root url="jar://D:/Android/.android/build-cache/1a2b217c42d1984f23a61a6468ef393681338283/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/1a2b217c42d1984f23a61a6468ef393681338283/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/1a2b217c42d1984f23a61a6468ef393681338283/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/6f8959c83d3b103b676677f8117861062b5d5f75/output/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Android/.android/build-cache/6f8959c83d3b103b676677f8117861062b5d5f75/output/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Android/.android/build-cache/6f8959c83d3b103b676677f8117861062b5d5f75/output/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
