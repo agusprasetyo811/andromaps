@@ -220,6 +220,7 @@ public class RestClient {
         private HashMap<String, String> customHeader = new HashMap<>();
         private int timeout = 60;
         private HttpLoggingInterceptor.Level loggingLevel = HttpLoggingInterceptor.Level.BODY;
+        private String noConnectionMessage = "No internet connection. You have to be online to access this feature";
 
         public HashMap<String, String> getCustomHeader() {
             return customHeader;
@@ -239,6 +240,14 @@ public class RestClient {
 
         public void setLoggingLevel(HttpLoggingInterceptor.Level loggingLevel) {
             this.loggingLevel = loggingLevel;
+        }
+
+        public void setNoConnectionMessage(String noConnectionMessage) {
+            this.noConnectionMessage = noConnectionMessage;
+        }
+
+        public String getNoConnectionMessage() {
+            return noConnectionMessage;
         }
     }
 
@@ -299,7 +308,7 @@ public class RestClient {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(config.getLoggingLevel());
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
-        httpClient.addInterceptor(new ConnectivityInterceptor(c));
+        httpClient.addInterceptor(new ConnectivityInterceptor(config.getNoConnectionMessage(), c));
         httpClient.addInterceptor(new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {

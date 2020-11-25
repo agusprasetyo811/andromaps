@@ -12,16 +12,18 @@ import okhttp3.Response;
 
 public class ConnectivityInterceptor implements Interceptor {
 
+    final String message;
     private Context mContext;
 
-    public ConnectivityInterceptor(Context context) {
+    public ConnectivityInterceptor(String message, Context context) {
+        this.message = message;
         mContext = context;
     }
 
     @Override
     public Response intercept(Chain chain) throws IOException {
         if (!isOnline(mContext)) {
-            throw new NoConnectivityException();
+            throw new NoConnectivityException(message);
         }
 
         Request.Builder builder = chain.request().newBuilder();
@@ -37,9 +39,15 @@ public class ConnectivityInterceptor implements Interceptor {
 
 class NoConnectivityException extends IOException {
 
+    final String message;
+
+    NoConnectivityException(String message) {
+        this.message = message;
+    }
+
     @Override
     public String getMessage() {
-        return "No connectivity exception";
+        return message;
     }
 
 }
