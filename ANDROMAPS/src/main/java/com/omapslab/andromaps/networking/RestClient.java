@@ -294,6 +294,58 @@ public class RestClient {
     }
 
 
+    public RestClient(String baseUrl, boolean disableSSL, final Config config, Context c) {
+
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(config.getLoggingLevel());
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.addInterceptor(new ConnectivityInterceptor(c));
+        httpClient.addInterceptor(new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                Request original = chain.request();
+                Request.Builder requestBuilder = original.newBuilder();
+                requestBuilder.addHeader("Cache-Control", "no-cache");
+                requestBuilder.addHeader("Cache-Control", "no-store");
+                for (String key : config.customHeader.keySet()) {
+                    requestBuilder.addHeader(key, config.customHeader.get(key));
+                }
+                requestBuilder.method(original.method(), original.body());
+                Request request = requestBuilder.build();
+                return chain.proceed(request);
+            }
+        }).addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
+        httpClient.followRedirects(true);
+        httpClient.followSslRedirects(true);
+        httpClient.retryOnConnectionFailure(true);
+        httpClient.cache(null);
+        httpClient.readTimeout(config.timeout, TimeUnit.SECONDS);
+        httpClient.connectTimeout(config.timeout, TimeUnit.SECONDS);
+        httpClient.addInterceptor(logging);
+
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        if (disableSSL) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(baseUrl)
+                    .client(enableTls12OnPreLollipop(httpClient).build())
+                    .client(setSSLFactoryForClient(httpClient).build())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build();
+        } else {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(baseUrl)
+                    .client(httpClient.build())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+    }
+
+
     public RestClient(String baseUrl, String auth) {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();

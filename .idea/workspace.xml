@@ -13,20 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5166c58e-41bc-49fe-aa9d-3f9e0ac6026b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/networking/ConnectivityInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_trinea_android_view_autoscrollviewpager_android_auto_scroll_view_pager_1_1_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_trinea_android_view_autoscrollviewpager_android_auto_scroll_view_pager_1_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_dr" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_dr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/AlertHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/AlertHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ANDROMAPS/andromaps.ANDROMAPS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ANDROMAPS/andromaps.ANDROMAPS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/networking/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/networking/RestClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +44,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>addOn</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,5 +99,15 @@
       <updated>1557286738476</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="264" key="#com.intellij.ide.util.MemberChooser" timestamp="1606322097376">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="264" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1606322097376" />
+    <state width="705" height="82" key="javadoc.popup.new" timestamp="1606323574637">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="705" height="82" key="javadoc.popup.new/0.0.1920.1080@0.0.1920.1080" timestamp="1606323574637" />
   </component>
 </project>
