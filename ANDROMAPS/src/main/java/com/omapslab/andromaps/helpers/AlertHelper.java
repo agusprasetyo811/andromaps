@@ -48,124 +48,150 @@ public class AlertHelper {
 
     /**
      * Dialog with prop
-     *  @param a
+     *
+     * @param a
      * @param p
      */
     public AlertDialog dialog(Activity a, DialogProperties p) {
-        AlertDialog.Builder alertDialogBuilder;
-        if (p.getTheme() == 0) {
-            alertDialogBuilder = new AlertDialog.Builder(a);
-        } else {
-            alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(a, p.getTheme()));
-        }
-        alertDialogBuilder.setTitle(p.getTitle());
-        alertDialogBuilder.setMessage(p.getMsg()).setCancelable(p.isCancelable()).setNeutralButton(p.getBtnOK(), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
+        try {
+            AlertDialog.Builder alertDialogBuilder;
+            if (p.getTheme() == 0) {
+                alertDialogBuilder = new AlertDialog.Builder(a);
+            } else {
+                alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(a, p.getTheme()));
             }
-        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-        return alertDialog;
+            alertDialogBuilder.setTitle(p.getTitle());
+            alertDialogBuilder.setMessage(p.getMsg()).setCancelable(p.isCancelable()).setNeutralButton(p.getBtnOK(), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                }
+            });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            return alertDialog;
+        } catch (Exception e) {
+            return null;
+        }
+
     }
 
     /**
      * Dialog with prop and listener
-     *  @param a
+     *
+     * @param a
      * @param p
      * @param listener
      */
     public AlertDialog dialog(Activity a, DialogProperties p, final dialogNeutralListener listener) {
-        AlertDialog.Builder alertDialogBuilder;
-        if (p.getTheme() == 0) {
-            alertDialogBuilder = new AlertDialog.Builder(a);
-        } else {
-            alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(a, p.getTheme()));
-        }
-        alertDialogBuilder.setTitle(p.getTitle());
-        alertDialogBuilder.setMessage(p.getMsg()).setCancelable(p.isCancelable()).setNeutralButton(p.getBtnOK(), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                listener.onClicked();
+        try {
+            AlertDialog.Builder alertDialogBuilder;
+            if (p.getTheme() == 0) {
+                alertDialogBuilder = new AlertDialog.Builder(a);
+            } else {
+                alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(a, p.getTheme()));
             }
-        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-        return alertDialog;
+            alertDialogBuilder.setTitle(p.getTitle());
+            alertDialogBuilder.setMessage(p.getMsg()).setCancelable(p.isCancelable()).setNeutralButton(p.getBtnOK(), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    listener.onClicked();
+                }
+            });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            return alertDialog;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     /**
      * DialogNeutralOk Helper
-     *  @param a
+     *
+     * @param a
      * @param t
      * @param m
      * @param listener
      */
     public AlertDialog dialogNeutralOK(Activity a, String t, String m, final dialogNeutralListener listener) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
-        alertDialogBuilder.setTitle(t);
-        alertDialogBuilder.setMessage(m).setCancelable(false).setNeutralButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                listener.onClicked();
-            }
-        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-        return alertDialog;
+        try {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
+            alertDialogBuilder.setTitle(t);
+            alertDialogBuilder.setMessage(m).setCancelable(false).setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    listener.onClicked();
+                }
+            });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            return alertDialog;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     /**
      * DialogConfirm Helper
-     *  @param a
+     *
+     * @param a
      * @param t
      * @param m
      * @param listener
      */
     public AlertDialog dialogConfirm(Activity a, String t, String m, final dialogConfirmListener listener) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
-        alertDialogBuilder.setTitle(t);
-        alertDialogBuilder.setMessage(m).setCancelable(false);
-        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                listener.onOkClick();
-            }
-        });
-        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                listener.onCancelClick();
-            }
-        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-        return alertDialog;
+        try {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(a);
+            alertDialogBuilder.setTitle(t);
+            alertDialogBuilder.setMessage(m).setCancelable(false);
+            alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    listener.onOkClick();
+                }
+            });
+            alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    listener.onCancelClick();
+                }
+            });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            return alertDialog;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     /**
      * Dialog confirm with prop
-     *  @param a
+     *
+     * @param a
      * @param p
      * @param listener
      */
     public AlertDialog dialogConfirm(Activity a, DialogProperties p, final dialogConfirmListener listener) {
-        AlertDialog.Builder alertDialogBuilder = null;
-        if (p.getTheme() == 0) {
-            alertDialogBuilder = new AlertDialog.Builder(a);
-        } else {
-            alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(a, p.getTheme()));
+        try {
+            AlertDialog.Builder alertDialogBuilder = null;
+            if (p.getTheme() == 0) {
+                alertDialogBuilder = new AlertDialog.Builder(a);
+            } else {
+                alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(a, p.getTheme()));
+            }
+            alertDialogBuilder.setTitle(p.getTitle());
+            alertDialogBuilder.setMessage(p.getMsg()).setCancelable(p.isCancelable());
+            alertDialogBuilder.setPositiveButton(p.getBtnPositive(), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    listener.onOkClick();
+                }
+            });
+            alertDialogBuilder.setNegativeButton(p.getBtnNegative(), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    listener.onCancelClick();
+                }
+            });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+            return alertDialog;
+        } catch (Exception e) {
+            return null;
         }
-        alertDialogBuilder.setTitle(p.getTitle());
-        alertDialogBuilder.setMessage(p.getMsg()).setCancelable(p.isCancelable());
-        alertDialogBuilder.setPositiveButton(p.getBtnPositive(), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                listener.onOkClick();
-            }
-        });
-        alertDialogBuilder.setNegativeButton(p.getBtnNegative(), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                listener.onCancelClick();
-            }
-        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-        return alertDialog;
     }
 
 

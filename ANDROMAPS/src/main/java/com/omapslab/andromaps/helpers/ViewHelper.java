@@ -69,8 +69,10 @@ public class ViewHelper {
      * @param a
      */
     public void hideKeyboard(Activity a) {
-        InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+        try {
+            InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+        } catch (Exception e) {}
     }
 
     /**
@@ -79,8 +81,10 @@ public class ViewHelper {
      * @param a
      */
     public void hideKeyboard(Activity a, View v) {
-        final InputMethodManager imm = (InputMethodManager) a.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+        try {
+            final InputMethodManager imm = (InputMethodManager) a.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+        } catch (Exception e) {}
     }
 
     /**
@@ -89,8 +93,10 @@ public class ViewHelper {
      * @param a
      */
     public void showKeyboard(Activity a) {
-        InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+        try {
+            InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+        } catch (Exception e) {}
     }
 
     /**
@@ -100,10 +106,14 @@ public class ViewHelper {
      * @return
      */
     public boolean isKeyboardVisible(Activity a) {
-        InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        if (imm.isAcceptingText()) {
-            return true;
-        } else {
+        try {
+            InputMethodManager imm = (InputMethodManager) a.getSystemService(Activity.INPUT_METHOD_SERVICE);
+            if (imm.isAcceptingText()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
             return false;
         }
     }
@@ -124,17 +134,19 @@ public class ViewHelper {
      * @param a
      */
     public void setFullScreen(Activity a) {
-        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+        try {
+            if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
 
-            setWindowFlag(a, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
-        }
-        if (Build.VERSION.SDK_INT >= 19) {
-            a.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
-        if (Build.VERSION.SDK_INT >= 21) {
-            setWindowFlag(a, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
-            a.getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
+                setWindowFlag(a, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
+            }
+            if (Build.VERSION.SDK_INT >= 19) {
+                a.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            }
+            if (Build.VERSION.SDK_INT >= 21) {
+                setWindowFlag(a, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
+                a.getWindow().setStatusBarColor(Color.TRANSPARENT);
+            }
+        } catch (Exception e) {}
     }
 
     /**
@@ -146,14 +158,16 @@ public class ViewHelper {
      * @param on
      */
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
-        Window win = activity.getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        if (on) {
-            winParams.flags |= bits;
-        } else {
-            winParams.flags &= ~bits;
-        }
-        win.setAttributes(winParams);
+        try {
+            Window win = activity.getWindow();
+            WindowManager.LayoutParams winParams = win.getAttributes();
+            if (on) {
+                winParams.flags |= bits;
+            } else {
+                winParams.flags &= ~bits;
+            }
+            win.setAttributes(winParams);
+        } catch (Exception e) {}
     }
 
 }

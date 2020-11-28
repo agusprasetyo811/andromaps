@@ -13,9 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5166c58e-41bc-49fe-aa9d-3f9e0ac6026b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/networking/ConnectivityInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/networking/ConnectivityInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/networking/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/networking/RestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/ActivityHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/ActivityHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/AlertHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/AlertHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/SymbolHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/SymbolHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/ViewHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANDROMAPS/src/main/java/com/omapslab/andromaps/helpers/ViewHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +46,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="287" />
-    <option name="y" value="34" />
-    <option name="width" value="1628" />
-    <option name="height" value="1051" />
   </component>
   <component name="ProjectId" id="1ipVvsu8qXy4eFo9AkjF402GIpH" />
   <component name="ProjectViewState">
@@ -101,13 +98,33 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="765" y="264" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1606322097376" />
-    <state width="705" height="82" key="javadoc.popup.new" timestamp="1606323807624">
+    <state width="1860" height="869" key="GridCell.Tab.0.bottom" timestamp="1606407781113">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="705" height="82" key="javadoc.popup.new/0.0.1920.1080@0.0.1920.1080" timestamp="1606323807624" />
+    <state width="1860" height="869" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606407781113" />
+    <state width="1860" height="869" key="GridCell.Tab.0.center" timestamp="1606407781112">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="869" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606407781112" />
+    <state width="1860" height="869" key="GridCell.Tab.0.left" timestamp="1606407781112">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="869" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606407781112" />
+    <state width="1860" height="869" key="GridCell.Tab.0.right" timestamp="1606407781113">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="869" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606407781113" />
+    <state width="705" height="82" key="javadoc.popup.new" timestamp="1606523312318">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="705" height="82" key="javadoc.popup.new/0.0.1920.1080@0.0.1920.1080" timestamp="1606523312318" />
     <state x="740" y="303" key="refactoring.ChangeSignatureDialog" timestamp="1606323741799">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="303" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606323741799" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1606407784303">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1606407784303" />
   </component>
 </project>

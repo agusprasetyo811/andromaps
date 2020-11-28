@@ -19,6 +19,9 @@ public class ActivityHelper {
      * @param activity
      */
     public void toActivity(Activity a, Class<?> activity) {
+        try {
+
+        } catch (Exception e) {}
         Intent i = new Intent(a, activity);
         a.startActivity(i);
     }
@@ -30,9 +33,11 @@ public class ActivityHelper {
      * @param listener
      */
     public void toActivity(Activity a, Class<?> activity, ToActivityListener listener) {
-        Intent i = new Intent(a, activity);
-        listener.setAction(i);
-        a.startActivity(i);
+        try {
+            Intent i = new Intent(a, activity);
+            listener.setAction(i);
+            a.startActivity(i);
+        } catch (Exception e) {}
     }
 
     /**
@@ -44,9 +49,11 @@ public class ActivityHelper {
      * @param listener
      */
     public void toActivityCallback(Activity a, int key, Class<?> activity, ToActivityListener listener) {
-        Intent i = new Intent(a, activity);
-        listener.setAction(i);
-        a.startActivityForResult(i, key);
+        try {
+            Intent i = new Intent(a, activity);
+            listener.setAction(i);
+            a.startActivityForResult(i, key);
+        } catch (Exception e) {}
     }
 
     /**
@@ -57,8 +64,10 @@ public class ActivityHelper {
      * @param activity
      */
     public void toActivityCallback(Activity a, int key, Class<?> activity) {
-        Intent i = new Intent(a, activity);
-        a.startActivityForResult(i, key);
+        try {
+            Intent i = new Intent(a, activity);
+            a.startActivityForResult(i, key);
+        } catch (Exception e) {}
     }
 
     /**
@@ -67,10 +76,12 @@ public class ActivityHelper {
      * @param activity
      */
     public void toForceActivity(Activity a, Class<?> activity) {
-        Intent i = new Intent(a, activity);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        a.startActivity(i);
-        a.finish();
+        try {
+            Intent i = new Intent(a, activity);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            a.startActivity(i);
+            a.finish();
+        } catch (Exception e) {}
     }
 
     /**
@@ -79,10 +90,12 @@ public class ActivityHelper {
      */
     @SuppressLint("WrongConstant")
     public void systemExit(Activity a) {
-        Intent i = new Intent(Intent.ACTION_MAIN);
-        i.addCategory(Intent.CATEGORY_HOME);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS | Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        a.startActivity(i);
+        try {
+            Intent i = new Intent(Intent.ACTION_MAIN);
+            i.addCategory(Intent.CATEGORY_HOME);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            a.startActivity(i);
+        } catch (Exception e) {}
     }
 
     /**
@@ -92,10 +105,12 @@ public class ActivityHelper {
      * @param listener
      */
     public void toForceActivity(Activity a, Class<?> activity, ToActivityListener listener) {
-        Intent i = new Intent(a, activity);
-        listener.setAction(i);
-        a.startActivity(i);
-        a.finish();
+        try {
+            Intent i = new Intent(a, activity);
+            listener.setAction(i);
+            a.startActivity(i);
+            a.finish();
+        } catch (Exception e) {}
     }
 
     public interface ToActivityListener {
